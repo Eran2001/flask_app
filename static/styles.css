@@ -7,3 +7,10 @@ h1 {
     text-align: center;
     font-size: 4rem;
 }
+
+a {
+    color: #FFF;
+    font-size: 2rem;
+    border: 1px solid #FFF;
+    padding: 1.5rem
+}
