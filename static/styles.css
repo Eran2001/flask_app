@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    min-height: 95.5vh;
+    background-color: yellow;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    background-color: purple;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 2rem
+}
