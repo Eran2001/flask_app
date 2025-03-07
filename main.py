@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from markupsafe import escape
 import random
 import datetime
+import requests
 
 app = Flask(__name__)
 
@@ -13,8 +14,13 @@ def home():
 
 @app.route("/guess/<username>")
 def guess_user(username):
-  return f"Hello {escape(username)}"
+  gender_response = requests.get(f"https://api.genderize.io?name={username}")
+  gender_data = gender_response.json()
+  gender = gender_data["gender"]
+  return render_template("guess.html", name=username, gender=gender)
 
 if __name__ == "__main__":
   app.run(debug=True)
   
+
+
